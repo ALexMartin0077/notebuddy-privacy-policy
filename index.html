@@ -1,108 +1,1824 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for NoteBuddy, a note-taking and productivity application.">
-  <title>Privacy Policy - NoteBuddy</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 24px;
-      color: #222;
-      background: #f5f7fb;
-    }
-    main {
-      background: white;
-      padding: 28px;
-      border-radius: 12px;
-    }
-    h1, h2 { color: #174ea6; }
-    h1 { line-height: 1.3; }
-    a { color: #174ea6; }
-    footer {
-      margin-top: 28px;
-      border-top: 1px solid #ddd;
-      padding-top: 16px;
-      font-size: 14px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100C08">
+<meta name="description" content="Official NoteBuddy Privacy Policy. Learn how NoteBuddy handles locally stored notes, voice features, and device permissions.">
+<title>Privacy Policy | NoteBuddy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #100c08;
+  --bg2: #17110b;
+  --surface: #1c1710;
+  --surface-light: #241b11;
+  --orange: #f28b27;
+  --orange-light: #ffc16b;
+  --gold: #e9b44f;
+  --gold-pale: #ffe6ae;
+  --text: #fff8ed;
+  --muted: #c1b6a5;
+  --line: rgba(242,139,39,.25);
+  --glow: 0 0 35px rgba(242,139,39,.10);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(ellipse at 90% 0%, #6c35141f, transparent 35%),
+    radial-gradient(ellipse at 0% 40%, #bd6a1010, transparent 32%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+a { color: inherit; }
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--orange-light);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(1240px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* TOP NAVIGATION */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--line);
+  background: rgba(16,12,8,.90);
+  backdrop-filter: blur(22px);
+}
+
+.nav {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.logo-symbol {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f28b2780;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #513019, #201309 75%);
+  color: var(--orange-light);
+  font-size: 28px;
+  box-shadow: inset 0 0 20px #f28b2717, 0 0 25px #f28b2710;
+}
+
+.logo-name {
+  display: block;
+  font-family: Manrope, sans-serif;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo-name span {
+  color: var(--orange);
+}
+
+.logo-tag {
+  display: block;
+  margin-top: 4px;
+  color: #b8a58b;
+  font-size: 9px;
+  letter-spacing: 2.1px;
+  line-height: 1.5;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #d3c7b7;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.current {
+  color: var(--orange-light);
+  background: #f28b2710;
+}
+
+.nav-links a.contact {
+  color: var(--orange-light);
+  border: 1px solid #f28b2760;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(100deg, #100c08 0%, #171008 55%, #26170a 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 530px;
+  height: 530px;
+  right: -130px;
+  top: -210px;
+  border-radius: 50%;
+  border: 1px solid #f28b2712;
+  box-shadow:
+    0 0 0 50px #f28b2706,
+    0 0 0 100px #f28b2704;
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+  min-height: 550px;
+  padding-block: 65px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border: 1px solid #f28b2750;
+  border-radius: 30px;
+  color: var(--orange-light);
+  background: linear-gradient(90deg, #f28b2712, #f28b2705);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+
+.eyebrow span {
+  font-size: 16px;
+}
+
+.hero h1 {
+  margin-top: 24px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(55px, 7vw, 88px);
+  font-weight: 600;
+  letter-spacing: -2.5px;
+  line-height: 1.02;
+}
+
+.gold-gradient {
+  background: linear-gradient(
+    115deg,
+    #fff0c9 0%,
+    #ffc16b 27%,
+    #ed8624 60%,
+    #ffd78d 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  margin-top: 14px;
+  color: #f5e2c5;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(23px, 3vw, 34px);
+}
+
+.hero-description {
+  max-width: 555px;
+  margin-top: 19px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e9b44f55;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #3b2713, #191008);
+  color: var(--orange-light);
+  font-size: 19px;
+}
+
+.feature strong {
+  display: block;
+  font-size: 11px;
+}
+
+.feature small {
+  display: block;
+  color: #aa9c89;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.effective-date {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 10px 14px;
+  border: 1px solid #f28b2740;
+  border-radius: 9px;
+  background: #f28b2709;
+  color: #e9d5b7;
+  font-size: 11px;
+}
+
+.effective-date span {
+  color: var(--orange-light);
+}
+
+/* PREMIUM NOTEBOOK */
+
+.artwork {
+  display: grid;
+  place-items: center;
+  min-height: 410px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.artwork::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #e9791b17;
+  filter: blur(65px);
+}
+
+.book-scene {
+  position: relative;
+  width: min(325px, 88%);
+  transform: rotateY(-8deg) rotateZ(-2deg);
+  transition: transform .5s ease;
+}
+
+.book-scene:hover {
+  transform: rotateY(0deg) rotateZ(0deg) translateY(-6px);
+}
+
+.book {
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 25px;
+  text-align: center;
+  border: 2px solid #bd762b;
+  border-radius: 8px 17px 17px 8px;
+  background:
+    radial-gradient(ellipse at 50% 30%, #422a15 0%, #20150c 45%, #110d08 100%);
+  box-shadow:
+    inset 0 0 0 5px #e9b44f0b,
+    inset 0 0 35px #0008,
+    9px 10px 0 -3px #75451c,
+    17px 23px 35px #0009,
+    0 0 45px #f28b2710;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid #e9b44f80;
+  border-radius: 5px 11px 11px 5px;
+  pointer-events: none;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #e9b44f55;
+}
+
+.book-emblem {
+  margin-top: 35px;
+  color: var(--orange-light);
+  font-size: 68px;
+  line-height: 1.2;
+  text-shadow: 0 0 30px #f28b2755;
+}
+
+.book-name {
+  margin-top: 10px;
+  font: 600 38px "Playfair Display", Georgia, serif;
+  color: #ffe1a0;
+  text-shadow: 0 3px 20px #f28b2730;
+}
+
+.book-divider {
+  width: 115px;
+  height: 2px;
+  margin: 22px auto;
+  background: linear-gradient(90deg, transparent, #f28b27, #ffe1a0, transparent);
+}
+
+.book-caption {
+  color: #d6b88d;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.book-bottom {
+  margin-top: 27px;
+  color: #c89a57;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.floating-note {
+  position: absolute;
+  right: -35px;
+  top: 30px;
+  width: 63px;
+  height: 63px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f28b2770;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #422813, #1b1008);
+  color: var(--orange-light);
+  font-size: 29px;
+  box-shadow: 0 12px 35px #0008;
+  transform: rotate(9deg);
+}
+
+.floating-shield {
+  position: absolute;
+  left: -28px;
+  bottom: 40px;
+  width: 57px;
+  height: 57px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f28b2770;
+  border-radius: 50%;
+  background: #211509;
+  color: #ffc16b;
+  font-size: 24px;
+  box-shadow: 0 12px 35px #0008;
+}
+
+.artwork-caption {
+  margin-top: 25px;
+  text-align: center;
+  color: #e7bd79;
+  font: italic 15px "Playfair Display", Georgia, serif;
+  letter-spacing: .6px;
+}
+
+/* MAIN CONTENT */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+  padding-top: 42px;
+  padding-bottom: 75px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 105px;
+  padding: 22px 15px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(150deg, #20170e, #15100b);
+  box-shadow: 0 20px 50px #0004;
+}
+
+.sidebar-heading {
+  padding: 0 10px;
+  margin-bottom: 4px;
+  font: 600 24px "Playfair Display", Georgia, serif;
+  color: var(--orange-light);
+}
+
+.sidebar-subtitle {
+  padding: 0 10px;
+  margin-bottom: 18px;
+  color: #9e8b73;
+  font-size: 10px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 4px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 9px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #c9bcaa;
+  font-size: 11px;
+  transition: .2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus-visible {
+  border-color: #f28b2735;
+  background: #f28b270b;
+  color: #ffd08a;
+}
+
+.sidebar-icon {
+  width: 22px;
+  flex-shrink: 0;
+  text-align: center;
+  color: var(--orange);
+  font-size: 15px;
+}
+
+.sidebar-number {
+  color: #9c7846;
+  font-size: 9px;
+}
+
+.sidebar-note {
+  margin-top: 23px;
+  padding: 18px 13px;
+  border: 1px solid #d88a3440;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #35200e, #1b120a);
+  text-align: center;
+}
+
+.sidebar-note .quote {
+  color: var(--orange);
+  font: 37px "Playfair Display", Georgia, serif;
+  line-height: 1.1;
+}
+
+.sidebar-note p {
+  color: #f8d9a6;
+  font: italic 18px/1.5 "Playfair Display", Georgia, serif;
+}
+
+.sidebar-note small {
+  display: block;
+  margin-top: 8px;
+  color: #a9957b;
+  font-size: 10px;
+}
+
+/* CONTENT CARDS */
+
+.policy-content {
+  min-width: 0;
+}
+
+.content-intro {
+  margin-bottom: 23px;
+  padding: 24px 26px;
+  border: 1px solid #f28b2735;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #24180d, #18120b);
+}
+
+.content-intro .mini-label {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.content-intro h2 {
+  margin-top: 7px;
+  font: 600 27px "Playfair Display", Georgia, serif;
+  color: var(--gold-pale);
+}
+
+.content-intro p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.policy-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  padding: 26px 27px;
+  border: 1px solid #f28b2726;
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 100% 0%, #f28b2708, transparent 48%),
+    linear-gradient(125deg, #1e1811, #17120d 75%);
+  box-shadow: 0 12px 35px #0002;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+}
+
+.policy-card:hover {
+  border-color: #f28b2760;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px #0003, var(--glow);
+}
+
+.policy-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffbd64, #e97720, transparent);
+  opacity: .75;
+}
+
+.section-heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 15px;
+}
+
+.section-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 47px;
+  height: 47px;
+  border: 1px solid #f28b275c;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #422814, #20140a);
+  color: #ffc16b;
+  font: 600 21px "Playfair Display", Georgia, serif;
+  box-shadow: inset 0 0 15px #f28b270d;
+}
+
+.section-heading h2 {
+  font: 600 clamp(19px, 2.3vw, 25px)/1.35 "Playfair Display", Georgia, serif;
+  color: var(--gold-pale);
+}
+
+.policy-card p {
+  margin-bottom: 12px;
+  color: #c9beaf;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.policy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-card strong {
+  color: #ffd394;
+  font-weight: 700;
+}
+
+.policy-card ul {
+  padding-left: 21px;
+  margin: 10px 0 15px;
+  color: #c9beaf;
+  font-size: 13px;
+}
+
+.policy-card li {
+  padding-left: 3px;
+  margin-bottom: 8px;
+  line-height: 1.85;
+}
+
+.policy-card li::marker {
+  color: var(--orange);
+}
+
+.contact-card {
+  border-color: #e9a04465;
+  background:
+    radial-gradient(ellipse at 100% 0%, #f28b2715, transparent 60%),
+    linear-gradient(125deg, #2b1c0e, #1b130b);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 13px 16px;
+  border: 1px solid #f28b2760;
+  border-radius: 9px;
+  background: #f28b270c;
+  color: #ffd394;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  transition: .25s;
+}
+
+.contact-link:hover {
+  background: #f28b271d;
+  border-color: #ffc16b;
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 1px solid var(--line);
+  background: #0b0805;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-block: 31px;
+}
+
+.footer-logo {
+  font: 600 24px "Playfair Display", Georgia, serif;
+  color: #ffe0a4;
+}
+
+.footer-logo span {
+  color: var(--orange);
+}
+
+.footer-tagline {
+  margin-top: 5px;
+  color: #a89985;
+  font-size: 11px;
+}
+
+.footer-right {
+  text-align: right;
+  color: #a89985;
+  font-size: 11px;
+}
+
+.footer-right strong {
+  display: block;
+  color: #f5b75f;
+  font: italic 16px "Playfair Display", Georgia, serif;
+  margin-bottom: 5px;
+}
+
+.back-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f28b2770;
+  border-radius: 13px;
+  background: #24170b;
+  color: #ffc16b;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 8px 30px #0007;
+  transition: .25s;
+}
+
+.back-top:hover {
+  background: #422814;
+  transform: translateY(-4px);
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .hero-grid {
+    gap: 20px;
+  }
+
+  .hero-features {
+    gap: 12px;
+  }
+
+  .main-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .sidebar {
+    padding: 17px 10px;
+  }
+
+  .policy-card {
+    padding: 22px 20px;
+  }
+
+  .artwork {
+    min-height: 360px;
+  }
+
+  .book-scene {
+    width: 285px;
+  }
+
+  .book {
+    min-height: 320px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .nav {
+    min-height: 70px;
+    gap: 8px;
+  }
+
+  .logo {
+    gap: 9px;
+  }
+
+  .logo-symbol {
+    width: 39px;
+    height: 39px;
+    font-size: 23px;
+    border-radius: 12px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+  }
+
+  .logo-tag {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .nav-links a:first-child,
+  .nav-links a:nth-child(2) {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding-block: 48px 30px;
+    gap: 8px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 12vw, 76px);
+  }
+
+  .hero-description {
+    margin-inline: auto;
+    font-size: 13px;
+  }
+
+  .hero-features {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .feature {
+    text-align: left;
+  }
+
+  .effective-date {
+    justify-content: center;
+  }
+
+  .artwork {
+    min-height: 350px;
+  }
+
+  .book-scene {
+    width: 260px;
+  }
+
+  .book {
+    min-height: 295px;
+  }
+
+  .book-emblem {
+    margin-top: 23px;
+    font-size: 58px;
+  }
+
+  .book-name {
+    font-size: 33px;
+  }
+
+  .floating-note {
+    right: -22px;
+    width: 51px;
+    height: 51px;
+  }
+
+  .floating-shield {
+    left: -20px;
+    width: 47px;
+    height: 47px;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr;
+    padding-top: 23px;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .sidebar nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .sidebar-note {
+    display: none;
+  }
+
+  .content-intro {
+    padding: 21px 19px;
+  }
+
+  .content-intro h2 {
+    font-size: 24px;
+  }
+
+  .policy-card {
+    padding: 21px 17px;
+  }
+
+  .section-heading {
+    gap: 11px;
+  }
+
+  .section-number {
+    width: 41px;
+    height: 41px;
+    font-size: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 21px;
+  }
+
+  .policy-card p,
+  .policy-card ul {
+    font-size: 12px;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-name {
+    font-size: 17px;
+  }
+
+  .logo-symbol {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-links a {
+    padding: 6px;
+    font-size: 9px;
+  }
+
+  .sidebar nav {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    gap: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* =========================================
+   NOTEBUDDY — ROYAL GOLD LUXURY THEME
+   ========================================= */
+
+:root {
+  --bg: #f4d27a;
+  --bg2: #ffebad;
+  --surface: #fff8e8;
+  --surface-light: #fff0c9;
+  --orange: #b85c08;
+  --orange-light: #e18a19;
+  --gold: #bd8420;
+  --gold-pale: #6d4009;
+  --text: #38220c;
+  --muted: #705638;
+  --line: rgba(143, 88, 12, .30);
+  --glow: 0 12px 35px rgba(117, 72, 8, .13);
+}
+
+body {
+  color: #38220c;
+  background:
+    radial-gradient(ellipse at 10% 5%,
+      #fff7d5 0%, transparent 35%),
+    radial-gradient(ellipse at 95% 20%,
+      #e6ac36 0%, transparent 32%),
+    radial-gradient(ellipse at 50% 80%,
+      #ffe8a0 0%, transparent 45%),
+    linear-gradient(135deg,
+      #f4d27a 0%,
+      #ffe9a5 35%,
+      #f0c45c 70%,
+      #ffedb8 100%);
+  background-attachment: fixed;
+}
+
+/* Premium navigation */
+
+.topbar {
+  background: rgba(255, 244, 207, .93);
+  border-bottom: 1px solid #c28b2c;
+  box-shadow: 0 5px 25px #82520c18;
+}
+
+.logo-symbol {
+  background: linear-gradient(145deg, #f6d77e, #d59a27);
+  border: 1px solid #a76b12;
+  color: #613705;
+  box-shadow:
+    inset 0 1px 3px #fff8d9,
+    0 5px 15px #a66c2020;
+}
+
+.logo-name {
+  color: #4b2a08;
+}
+
+.logo-name span {
+  color: #a95c09;
+}
+
+.logo-tag {
+  color: #79501e;
+}
+
+.nav-links a {
+  color: #62431d;
+}
+
+.nav-links a:hover,
+.nav-links a.current {
+  color: #8a4a06;
+  background: #e7b64c38;
+}
+
+.nav-links a.contact {
+  color: #784009;
+  border-color: #bd8420;
+  background: linear-gradient(135deg, #ffeab0, #eec25c);
+}
+
+/* Bright golden hero */
+
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 10%,
+      #fff8d7 0%, transparent 35%),
+    linear-gradient(125deg,
+      #f0c45c 0%,
+      #ffebaa 48%,
+      #e9bd51 100%);
+  border-bottom: 1px solid #c28b2c;
+}
+
+.hero::before {
+  border-color: #a86b171c;
+  box-shadow:
+    0 0 0 50px #a86b1708,
+    0 0 0 100px #a86b1705;
+}
+
+.eyebrow {
+  color: #79450a;
+  border-color: #b77b1b80;
+  background: linear-gradient(90deg, #fff6d5, #f7d98b);
+}
+
+.hero h1 {
+  color: #442708;
+}
+
+.gold-gradient {
+  background: linear-gradient(
+    110deg,
+    #6e3a06 0%,
+    #a55a08 30%,
+    #d18b16 55%,
+    #784307 78%,
+    #bd7a10 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  color: #56350e;
+}
+
+.hero-description {
+  color: #654a28;
+}
+
+.feature-icon {
+  color: #714008;
+  border-color: #bd8420;
+  background: linear-gradient(145deg, #fff2c5, #eac15e);
+}
+
+.feature strong {
+  color: #4c2e0d;
+}
+
+.feature small {
+  color: #74552d;
+}
+
+.effective-date {
+  background: #fff5d5b8;
+  border-color: #bd842080;
+  color: #63431d;
+}
+
+.effective-date span {
+  color: #975407;
+}
+
+/* Royal gold notebook illustration */
+
+.book {
+  background:
+    radial-gradient(ellipse at 50% 25%,
+      #fff0b2 0%,
+      #e9bc52 40%,
+      #b77a1d 100%);
+  border-color: #87500d;
+  box-shadow:
+    inset 0 0 0 5px #fff5cf40,
+    inset 0 0 35px #86500d20,
+    9px 10px 0 -3px #b77b21,
+    17px 23px 35px #76501930,
+    0 0 45px #c38a1e25;
+}
+
+.book::before {
+  border-color: #8c570e;
+}
+
+.book::after {
+  border-color: #986315;
+}
+
+.book-emblem {
+  color: #80500e;
+  text-shadow: 0 0 25px #fff5ce90;
+}
+
+.book-name {
+  color: #5a3408;
+  text-shadow: 0 2px 15px #fff0b255;
+}
+
+.book-divider {
+  background: linear-gradient(
+    90deg, transparent, #8c570e, #fff0b0, #8c570e, transparent
+  );
+}
+
+.book-caption {
+  color: #6d4717;
+}
+
+.book-bottom {
+  color: #6e450e;
+}
+
+.floating-note,
+.floating-shield {
+  background: linear-gradient(145deg, #fff3c9, #e7bd59);
+  border-color: #a76c13;
+  color: #75440a;
+  box-shadow: 0 12px 35px #83510e30;
+}
+
+.artwork-caption {
+  color: #69420f;
+}
+
+/* Light, elegant contents navigation */
+
+.sidebar {
+  background: linear-gradient(145deg, #fff8e6, #f7e2a9);
+  border-color: #c99a3c;
+  box-shadow: 0 15px 40px #8e5a1220;
+}
+
+.sidebar-heading {
+  color: #80500e;
+}
+
+.sidebar-subtitle {
+  color: #82663f;
+}
+
+.sidebar nav a {
+  color: #644522;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus-visible {
+  border-color: #c18b2d;
+  background: #edca7538;
+  color: #774306;
+}
+
+.sidebar-icon {
+  color: #b87312;
+}
+
+.sidebar-number {
+  color: #99732f;
+}
+
+.sidebar-note {
+  border-color: #c79a43;
+  background: linear-gradient(145deg, #ffedb4, #eac15d);
+}
+
+.sidebar-note .quote {
+  color: #a45c08;
+}
+
+.sidebar-note p {
+  color: #633a0b;
+}
+
+.sidebar-note small {
+  color: #775322;
+}
+
+/* Privacy introduction panel */
+
+.content-intro {
+  border-color: #c69a41;
+  background: linear-gradient(120deg, #fff7e1, #f6e0a3);
+  box-shadow: 0 10px 30px #88550c12;
+}
+
+.content-intro .mini-label {
+  color: #9a5a09;
+}
+
+.content-intro h2 {
+  color: #5b360b;
+}
+
+.content-intro p {
+  color: #705535;
+}
+
+/* Cream-gold privacy cards */
+
+.policy-card {
+  border-color: #d1ad60;
+  background:
+    radial-gradient(ellipse at 100% 0%,
+      #f4d47725, transparent 48%),
+    linear-gradient(135deg,
+      #fffdf5 0%,
+      #fff7e4 65%,
+      #fff0cc 100%);
+  box-shadow: 0 10px 28px #8d5a1215;
+}
+
+.policy-card:hover {
+  border-color: #b97c18;
+  box-shadow:
+    0 15px 38px #80500c20,
+    0 0 22px #d6a53a20;
+}
+
+.policy-card::after {
+  background: linear-gradient(
+    180deg, #f8d66e, #bd7816, #f5d58a
+  );
+  opacity: 1;
+}
+
+.section-number {
+  color: #784407;
+  border-color: #c69a41;
+  background: linear-gradient(145deg, #fff0b8, #e9c15d);
+  box-shadow: inset 0 0 15px #fff7d950;
+}
+
+.section-heading h2 {
+  color: #57330b;
+}
+
+.policy-card p {
+  color: #695239;
+}
+
+.policy-card strong {
+  color: #8b4e08;
+}
+
+.policy-card ul {
+  color: #695239;
+}
+
+.policy-card li::marker {
+  color: #b97713;
+}
+
+/* Premium contact section */
+
+.contact-card {
+  border-color: #bc8b2d;
+  background:
+    radial-gradient(ellipse at 100% 0%,
+      #f0cb703d, transparent 60%),
+    linear-gradient(125deg, #fff4d4, #f3dda0);
+}
+
+.contact-link {
+  color: #754309;
+  border-color: #b77a18;
+  background: linear-gradient(135deg, #fff5d5, #f2d17c);
+  box-shadow: 0 4px 12px #8c5b1010;
+}
+
+.contact-link:hover {
+  background: linear-gradient(135deg, #ffe9a1, #e9bd52);
+  border-color: #8c5509;
+}
+
+/* Golden footer */
+
+.footer {
+  border-top: 1px solid #b8882c;
+  background: linear-gradient(135deg, #f4d27a, #ffedb6, #e7bc51);
+}
+
+.footer-logo {
+  color: #59360b;
+}
+
+.footer-logo span {
+  color: #a75b09;
+}
+
+.footer-tagline {
+  color: #76542b;
+}
+
+.footer-right {
+  color: #76542b;
+}
+
+.footer-right strong {
+  color: #7c4809;
+}
+
+/* Golden floating back-to-top button */
+
+.back-top {
+  color: #603606;
+  border-color: #9e6715;
+  background: linear-gradient(145deg, #fff0b0, #e6b749);
+  box-shadow: 0 8px 25px #85550c30;
+}
+
+.back-top:hover {
+  background: linear-gradient(145deg, #ffed9e, #dba52e);
+}
+
+/* Smooth, accessible selection */
+
+::selection {
+  background: #bd8420;
+  color: #fffdf5;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    background: linear-gradient(
+      145deg, #f5d47d, #fff0b7 55%, #eec35e
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+</style>
 </head>
-<body>
-<main>
-  <h1>Privacy Policy for NoteBuddy</h1>
-  <p><strong>Effective date:</strong> October 26, 2026</p>
 
-  <h2>1. Introduction</h2>
-  <p>NoteBuddy is a note-taking and productivity application.
-  This policy explains how the app handles information when you
-  use its features.</p>
+<body id="top">
 
-  <h2>2. Information and Local Storage</h2>
-  <p>NoteBuddy is designed to store notes and other supported
-  content locally on your device. The app does not use Firebase
-  or a developer-operated cloud service to store or synchronize
-  your notes.</p>
+<header class="topbar">
+  <div class="container nav">
+    <a href="#top" class="logo" aria-label="NoteBuddy Privacy Policy home">
+      <span class="logo-symbol" aria-hidden="true">✎</span>
+      <span>
+        <span class="logo-name">Note<span>Buddy</span></span>
+        <span class="logo-tag">YOUR THOUGHTS. YOUR SPACE.</span>
+      </span>
+    </a>
 
-  <h2>3. Voice Features</h2>
-  <p>NoteBuddy supports voice-related functionality, such as
-  voice recording or voice-to-text. Audio may be processed on
-  your device or through an external speech-processing service,
-  depending on the implementation and device. If an external
-  service is used, its privacy practices may apply.</p>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#introduction">About</a>
+      <a href="#introduction" class="current">Privacy</a>
+      <a href="#contact" class="contact">Contact ↗</a>
+    </nav>
+  </div>
+</header>
 
-  <h2>4. Permissions</h2>
-  <p>The app may request microphone permission for voice
-  features, notification permission for reminders, and access
-  to images or files that you choose to attach. Actual
-  permissions depend on the installed version.</p>
+<section class="hero">
+  <div class="container hero-grid">
 
-  <h2>5. Analytics and Advertising</h2>
-  <p>Based on the current developer configuration, NoteBuddy
-  does not include advertising, analytics, or crash-reporting
-  SDKs. Device operating systems and other services may
-  independently process technical information under their
-  own policies.</p>
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span aria-hidden="true">✧</span>
+        Privacy. Clarity. Trust.
+      </div>
 
-  <h2>6. Data Sharing</h2>
-  <p>NoteBuddy does not upload locally stored notes to a
-  developer-operated cloud service. Information may be
-  processed by your device or an external service when
-  you choose a feature that requires it, including voice-to-text.</p>
+      <h1>
+        Privacy<br>
+        <span class="gold-gradient">Policy.</span>
+      </h1>
 
-  <h2>7. Security and Retention</h2>
-  <p>Locally stored information may be lost if you uninstall
-  the app, clear its data, reset your device, or experience
-  device failure. Keep backups of important content where
-  possible.</p>
+      <div class="hero-subtitle">
+        A clearer view of <span class="gold-gradient">NoteBuddy</span>
+      </div>
 
-  <h2>8. Children's Privacy</h2>
-  <p>We do not knowingly collect personal information through
-  the app's local note-storage functionality. Applicable
-  children's privacy requirements may apply depending on
-  the app's audience and use of external services.</p>
+      <p class="hero-description">
+        Your ideas are personal. Your notes deserve thoughtful
+        protection. This policy explains how NoteBuddy handles
+        your locally stored content, voice features, and device
+        permissions — in clear and simple language.
+      </p>
 
-  <h2>9. Your Choices</h2>
-  <p>You can manage your notes using the app's available
-  features and control device permissions through your
-  device settings. Deleting app data or uninstalling the app
-  may permanently remove locally stored content.</p>
+      <div class="hero-features">
+        <div class="feature">
+          <span class="feature-icon" aria-hidden="true">▣</span>
+          <span>
+            <strong>Local Note Storage</strong>
+            <small>Stored on your device</small>
+          </span>
+        </div>
 
-  <h2>10. Changes to This Policy</h2>
-  <p>This policy may be updated if the app's features or
-  data practices change. The latest version will be published
-  on this page.</p>
+        <div class="feature">
+          <span class="feature-icon" aria-hidden="true">◇</span>
+          <span>
+            <strong>No Advertising SDKs</strong>
+            <small>No in-app advertising SDKs</small>
+          </span>
+        </div>
+      </div>
 
-  <h2>11. Contact Us</h2>
-  <p>For privacy questions, contact the NoteBuddy developer:</p>
-  <p><strong>Email:</strong> immanuelrajkumarjunior85@gmail.com </p>
+      <div class="effective-date">
+        <span aria-hidden="true">▦</span>
+        <span><strong>Effective date:</strong> October 26, 2026</span>
+      </div>
+    </div>
 
-  <footer>
-    Privacy Policy for NoteBuddy
-  </footer>
+    <div class="artwork">
+      <div>
+        <div class="book-scene">
+          <div class="book">
+            <div class="book-emblem" aria-hidden="true">✧</div>
+            <div class="book-name">NoteBuddy</div>
+            <div class="book-divider"></div>
+            <div class="book-caption">PRIVACY · TRUST · SIMPLICITY</div>
+            <div class="book-bottom">EST. WITH CARE</div>
+          </div>
+          <div class="floating-note" aria-hidden="true">✎</div>
+          <div class="floating-shield" aria-hidden="true">◇</div>
+        </div>
+        <div class="artwork-caption">
+          Every thought deserves its own space.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<main class="container main-layout">
+
+  <aside class="sidebar">
+    <h2 class="sidebar-heading">Explore Policy</h2>
+    <p class="sidebar-subtitle">Everything you need to know</p>
+
+    <nav aria-label="Privacy policy contents">
+      <a href="#introduction"><span class="sidebar-icon">◈</span><span class="sidebar-number">01</span> Introduction</a>
+      <a href="#storage"><span class="sidebar-icon">▣</span><span class="sidebar-number">02</span> Local Storage</a>
+      <a href="#voice"><span class="sidebar-icon">♫</span><span class="sidebar-number">03</span> Voice Features</a>
+      <a href="#permissions"><span class="sidebar-icon">⚙</span><span class="sidebar-number">04</span> Permissions</a>
+      <a href="#analytics"><span class="sidebar-icon">◇</span><span class="sidebar-number">05</span> Analytics & Ads</a>
+      <a href="#sharing"><span class="sidebar-icon">⇄</span><span class="sidebar-number">06</span> Information Sharing</a>
+      <a href="#security"><span class="sidebar-icon">⬡</span><span class="sidebar-number">07</span> Security & Retention</a>
+      <a href="#children"><span class="sidebar-icon">♧</span><span class="sidebar-number">08</span> Children's Privacy</a>
+      <a href="#choices"><span class="sidebar-icon">☷</span><span class="sidebar-number">09</span> Your Choices</a>
+      <a href="#updates"><span class="sidebar-icon">⟳</span><span class="sidebar-number">10</span> Policy Updates</a>
+      <a href="#contact"><span class="sidebar-icon">✉</span><span class="sidebar-number">11</span> Contact Us</a>
+    </nav>
+
+    <div class="sidebar-note">
+      <div class="quote">“</div>
+      <p>Your thoughts<br>belong to you.</p>
+      <small>THE NOTEBUDDY PROMISE</small>
+    </div>
+  </aside>
+
+  <div class="policy-content">
+
+    <div class="content-intro">
+      <div class="mini-label">The privacy commitment</div>
+      <h2>Transparency comes first.</h2>
+      <p>
+        Read how the App handles information, what voice features
+        may involve, and which choices remain in your hands.
+      </p>
+    </div>
+
+    <section class="policy-card" id="introduction">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2>Introduction</h2>
+      </div>
+      <p>
+        Welcome to <strong>NoteBuddy</strong> ("we", "our", or
+        "the App"). NoteBuddy is a note-taking and productivity
+        application designed to help you capture ideas, organize
+        information, and manage your personal content.
+      </p>
+      <p>
+        This Privacy Policy explains how information is handled
+        when you use the App. Please review it to understand the
+        features, device permissions, and external processing
+        that may be relevant to your use.
+      </p>
+    </section>
+
+    <section class="policy-card" id="storage">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <h2>Information & Local Storage</h2>
+      </div>
+      <p>
+        NoteBuddy is designed to store notes and other supported
+        content locally on your device. This may include text
+        notes, lists, tables, folders, and other content created
+        using the App's available features.
+      </p>
+      <p>
+        <strong>NoteBuddy does not use Firebase or a
+        developer-operated cloud service to store or synchronize
+        your notes.</strong> The App's local note-storage
+        functionality does not send your notes to us.
+      </p>
+      <p>
+        If you choose to attach images or files, the App may
+        access the content you select through the device's
+        available features and permissions.
+      </p>
+    </section>
+
+    <section class="policy-card" id="voice">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <h2>Voice Recording & Voice-to-Text</h2>
+      </div>
+      <p>
+        NoteBuddy supports voice-related functionality, including
+        voice recording or voice-to-text. Audio or speech input
+        may be processed to provide the feature you choose.
+      </p>
+      <p>
+        Depending on the specific implementation and your device,
+        speech processing may happen on the device or through an
+        external speech-processing service. If an external service
+        is used, its privacy practices and terms may also apply.
+      </p>
+      <p>
+        The exact processing, transmission, and retention of audio
+        depend on the voice feature and service used by the
+        installed version. Do not assume that all voice processing
+        occurs offline.
+      </p>
+    </section>
+
+    <section class="policy-card" id="permissions">
+      <div class="section-heading">
+        <span class="section-number">04</span>
+        <h2>Device Permissions</h2>
+      </div>
+      <p>
+        Depending on the features available in your installed
+        version, NoteBuddy may request permissions such as:
+      </p>
+      <ul>
+        <li><strong>Microphone:</strong> to support voice recording or speech input where required.</li>
+        <li><strong>Notifications:</strong> to deliver reminders you configure.</li>
+        <li><strong>Photos or files:</strong> to access content you choose to attach or import.</li>
+      </ul>
+      <p>
+        You can manage available permissions in your device
+        settings. If you deny a permission, the related feature
+        may not work as intended. Actual permissions depend on
+        the installed version and features you use.
+      </p>
+    </section>
+
+    <section class="policy-card" id="analytics">
+      <div class="section-heading">
+        <span class="section-number">05</span>
+        <h2>Analytics, Crash Reporting & Advertising</h2>
+      </div>
+      <p>
+        Based on the current developer configuration, NoteBuddy
+        does not include advertising SDKs, analytics SDKs, or
+        crash-reporting SDKs.
+      </p>
+      <p>
+        This statement concerns SDKs included in the App. It does
+        not rule out technical information being processed
+        independently by your operating system, app distribution
+        platform, or an external service used for a feature.
+        Such services may operate under their own privacy policies.
+      </p>
+    </section>
+
+    <section class="policy-card" id="sharing">
+      <div class="section-heading">
+        <span class="section-number">06</span>
+        <h2>Information Sharing</h2>
+      </div>
+      <p>
+        NoteBuddy does not upload locally stored notes to a
+        developer-operated cloud service. We do not sell your
+        personal notes or personal content.
+      </p>
+      <p>
+        When you use a feature involving an external service,
+        such as voice-to-text, information may be processed by
+        that service depending on the implementation. The
+        provider's own privacy policy may apply.
+      </p>
+      <p>
+        Information may also be disclosed when required by
+        applicable law or valid legal process.
+      </p>
+    </section>
+
+    <section class="policy-card" id="security">
+      <div class="section-heading">
+        <span class="section-number">07</span>
+        <h2>Security & Data Retention</h2>
+      </div>
+      <p>
+        Notes stored on your device remain subject to the security
+        of that device and its operating system. Use an appropriate
+        screen lock and keep your device software updated.
+      </p>
+      <p>
+        Locally stored information may be permanently lost if you
+        uninstall the App, clear its data, reset your device, or
+        experience device failure. Recovery may not be possible
+        if you do not have a backup.
+      </p>
+      <p>
+        If an external service processes information when you use
+        a feature, that provider's retention and deletion practices
+        may also apply.
+      </p>
+    </section>
+
+    <section class="policy-card" id="children">
+      <div class="section-heading">
+        <span class="section-number">08</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>
+        NoteBuddy does not knowingly collect personal information
+        through its local note-storage functionality. Parents and
+        guardians should supervise children's use of device
+        permissions and external services where appropriate.
+      </p>
+      <p>
+        Additional children's privacy laws and Google Play
+        requirements may apply depending on the App's intended
+        audience, distribution, and actual functionality.
+      </p>
+    </section>
+
+    <section class="policy-card" id="choices">
+      <div class="section-heading">
+        <span class="section-number">09</span>
+        <h2>Your Choices & Controls</h2>
+      </div>
+      <p>You can use the App and device settings to:</p>
+      <ul>
+        <li>View, edit, and delete content using available features.</li>
+        <li>Choose which images or files to attach.</li>
+        <li>Grant or deny available device permissions.</li>
+        <li>Manage notifications through device settings.</li>
+        <li>Stop using the App or uninstall it.</li>
+      </ul>
+      <p>
+        Clearing App data or uninstalling NoteBuddy may permanently
+        remove locally stored content. Back up important
+        information where suitable backup options are available.
+      </p>
+      <p>
+        Depending on your location, you may have additional
+        privacy rights under applicable law.
+      </p>
+    </section>
+
+    <section class="policy-card" id="updates">
+      <div class="section-heading">
+        <span class="section-number">10</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>
+        We may update this Privacy Policy when the App's features,
+        technical implementation, or legal obligations change.
+        The updated policy will be published on this page, with
+        a revised effective date where appropriate.
+      </p>
+      <p>
+        Please revisit this page periodically to remain informed
+        about our privacy practices.
+      </p>
+    </section>
+
+    <section class="policy-card contact-card" id="contact">
+      <div class="section-heading">
+        <span class="section-number">11</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p>
+        If you have questions about this Privacy Policy or
+        NoteBuddy's handling of information, contact the
+        developer using the email address below.
+      </p>
+      <a class="contact-link"
+         href="mailto:immanuelrajkumarjunior85@gmail.com">
+        <span aria-hidden="true">✉</span>
+        immanuelrajkumarjunior85@gmail.com
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+  </div>
 </main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-logo">Note<span>Buddy</span> ✧</div>
+      <div class="footer-tagline">
+        A thoughtful space for every idea.
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <strong>Thoughtfully designed. Clearly explained.</strong>
+      Privacy Policy · Effective October 26, 2026
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="back-top" aria-label="Back to top">↑</a>
+
 </body>
 </html>
